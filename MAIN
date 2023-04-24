@@ -99,7 +99,7 @@ game.Players.LocalPlayer:GetMouse().Button1Down:Connect(function()
 
 if ClickToTeleport == true then
 
-game.Players.LocalPlayer.Character:MoveTo(game.Players.LocalPlayer:GetMouse.Hit.Position)
+game.Players.LocalPlayer.Character:MoveTo(game.Players.LocalPlayer:GetMouse().Hit.Position)
 
 end
 
