@@ -21,27 +21,7 @@ MainSection:NewLabel("Coming Soon...")
 local Player = Window:NewTab("Player")
 local PlayerSection = Player:NewSection("Player")
 
-PlayerSection:NewToggle("Invincible", "Invincible", function(state)
-
-if state then
-
-local success2, errorMessage2 = pcall(function()
-
-v.CanTouch = false
-
-end)
-
-else
-
-local success2, errorMessage2 = pcall(function()
-
-v.CanTouch = true
-
-end)
-
-end
-
-end)
+PlayerSection:NewLabel("Coming Soon...")
 
 -- Teleport Section
 
