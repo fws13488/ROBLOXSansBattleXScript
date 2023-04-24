@@ -1,3 +1,5 @@
+print("Loading")
+
 if game.PlaceId ~= 8079658723 then game.Players.LocalPlayer:Kick("Cannot use in this game") return end
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
