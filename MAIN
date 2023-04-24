@@ -47,6 +47,12 @@ local success, errorMessage = pcal(function()
 
     end)
 
+    TeleportSection:NewButton("Chara Characters", "Teleport to Chara Characters", function()
+
+      game.Players.LocalPlayer.Character:MoveTo(game.Workspace.CHARA.ToMain.Position)
+
+    end)
+
 end)
 
 if not success then
