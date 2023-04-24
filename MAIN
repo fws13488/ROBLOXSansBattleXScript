@@ -77,6 +77,12 @@ game.Players.LocalPlayer.Character:MoveTo(game.Workspace.PAPYRUS.ToMain.Position
 
 end)
 
+TeleportSection:NewButton("Duos and Trios Characters", "Teleport to Duos and Trios Characters", function()
+
+game.Players.LocalPlayer.Character:MoveTo(game.Workspace.DUOS.ToMain.Position)
+
+end)
+
 end)
 
 if not success then
