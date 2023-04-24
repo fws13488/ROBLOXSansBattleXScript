@@ -3,6 +3,8 @@ if game.PlaceId ~= 8079658723 then game.Player.LocalPlayer:Kick("Cannot use in t
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Sans Battles X", "Ocean")
 
+local ClickToTeleport = false
+
 local success, errorMessage = pcall(function()
 
 -- Main Section
@@ -74,6 +76,30 @@ end)
 TeleportSection:NewButton("Duos and Trios Characters", "Teleport to Duos and Trios Characters", function()
 
 game.Players.LocalPlayer.Character:MoveTo(game.Workspace.DUOS.ToMain.Position)
+
+end)
+
+TeleportSection:NewToggle("Click To Teleport", "Teleport To Clicked Position", function(state)
+
+if state then
+
+ClickToTeleport = true
+
+else
+
+ClickToTeleport = false
+
+end
+
+end)
+
+game.Players.LocalPlayer:GetMouse.Button1Down:Connect(function()
+
+if ClickToTeleport == true then
+
+game.Players.LocalPlayer.Character:MoveTo(game.Players.LocalPlayer:GetMouse.Hit.Position)
+
+end
 
 end)
 
