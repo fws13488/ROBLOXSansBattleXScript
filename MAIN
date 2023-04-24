@@ -29,6 +29,12 @@ local success, errorMessage = pcal(function()
 
     end)
 
+     TeleportSection:NewButton("Balloon Sans Shop", "Teleport to Balloon Sans Shop", function()
+
+      game.Players.LocalPlayer.Character:MoveTo(game.Workspace.Shop.ToMain.Position)
+
+    end)
+
 end)
 
 if not success then
