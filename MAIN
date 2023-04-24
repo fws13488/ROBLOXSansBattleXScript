@@ -41,6 +41,12 @@ local success, errorMessage = pcal(function()
 
     end)
 
+     TeleportSection:NewButton("Help Section", "Teleport to Help Section", function()
+
+      game.Players.LocalPlayer.Character:MoveTo(game.Workspace.Help.ToTutorial.Position)
+
+    end)
+
 end)
 
 if not success then
