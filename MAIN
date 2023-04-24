@@ -5,64 +5,70 @@ local Window = Library.CreateLib("Sans Battles X", "Ocean")
 
 local success, errorMessage = pcall(function()
 
-  -- Main Section
+-- Main Section
 
-  local Main = Window:NewTab("Main")
-  local MainSection = Main:NewSection("Main")
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main")
 
-  MainSection:NewLabel("Coming Soon...")
+MainSection:NewLabel("Coming Soon...")
 
-  -- Teleport Section
+-- Teleport Section
 
-  local Teleport = Window:NewTab("Teleport")
-  local TeleportSection = Teleport:NewSection("Teleport")
+local Teleport = Window:NewTab("Teleport")
+local TeleportSection = Teleport:NewSection("Teleport")
 
-  TeleportSection:NewButton("Lobby", "Teleport to Lobby", function()
+TeleportSection:NewButton("Lobby", "Teleport to Lobby", function()
 
-    game.Players.LocalPlayer.Character:MoveTo(game.Workspace.SpawnLocation.Position)
+game.Players.LocalPlayer.Character:MoveTo(game.Workspace.SpawnLocation.Position)
 
-  end)
+end)
 
-  TeleportSection:NewButton("Main Characters", "Teleport to Main Characters", function()
+TeleportSection:NewButton("Main Characters", "Teleport to Main Characters", function()
 
-      game.Players.LocalPlayer.Character:MoveTo(game.Workspace.STARTERS.ToLobby.Position)
+game.Players.LocalPlayer.Character:MoveTo(game.Workspace.STARTERS.ToLobby.Position)
 
-    end)
+end)
 
-     TeleportSection:NewButton("Balloon Sans Shop", "Teleport to Balloon Sans Shop", function()
+TeleportSection:NewButton("Balloon Sans Shop", "Teleport to Balloon Sans Shop", function()
 
-      game.Players.LocalPlayer.Character:MoveTo(game.Workspace.Shop.ToMain.Position)
+game.Players.LocalPlayer.Character:MoveTo(game.Workspace.Shop.ToMain.Position)
 
-    end)
+end)
 
-    TeleportSection:NewButton("Soul Zone", "Teleport to Soul Zone", function()
+TeleportSection:NewButton("Soul Zone", "Teleport to Soul Zone", function()
 
-      game.Players.LocalPlayer.Character:MoveTo(game.Workspace["Soul Zone"].GoBack.Position)
+game.Players.LocalPlayer.Character:MoveTo(game.Workspace["Soul Zone"].GoBack.Position)
 
-    end)
+end)
 
-     TeleportSection:NewButton("Help Section", "Teleport to Help Section", function()
+TeleportSection:NewButton("Help Section", "Teleport to Help Section", function()
 
-      game.Players.LocalPlayer.Character:MoveTo(game.Workspace.Help.ToTutorial.Position)
+game.Players.LocalPlayer.Character:MoveTo(game.Workspace.Help.ToTutorial.Position)
 
-    end)
+end)
 
-    TeleportSection:NewButton("Chara Characters", "Teleport to Chara Characters", function()
+TeleportSection:NewButton("Chara Characters", "Teleport to Chara Characters", function()
 
-      game.Players.LocalPlayer.Character:MoveTo(game.Workspace.CHARA.ToMain.Position)
+game.Players.LocalPlayer.Character:MoveTo(game.Workspace.CHARA.ToMain.Position)
 
-    end)
+end)
 
-     TeleportSection:NewButton("Gamepass Characters", "Teleport to Gamepass Characters", function()
+TeleportSection:NewButton("Gamepass Characters", "Teleport to Gamepass Characters", function()
 
-      game.Players.LocalPlayer.Character:MoveTo(game.Workspace.GAMEPASSES.ToMain.Position)
+game.Players.LocalPlayer.Character:MoveTo(game.Workspace.GAMEPASSES.ToMain.Position)
 
-    end)
+end)
+
+TeleportSection:NewButton("Gamepass Characters", "Teleport to Gamepass Characters", function()
+
+game.Players.LocalPlayer.Character:MoveTo(game.Workspace.GAMEPASSES.ToMain.Position)
+
+end)
 
 end)
 
 if not success then
 
-   warn(errorMessage)
+warn(errorMessage)
 
 end
