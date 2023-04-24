@@ -53,6 +53,12 @@ local success, errorMessage = pcal(function()
 
     end)
 
+     TeleportSection:NewButton("Gamepass Characters", "Teleport to Gamepass Characters", function()
+
+      game.Players.LocalPlayer.Character:MoveTo(game.Workspace.GAMEPASSES.ToMain.Position)
+
+    end)
+
 end)
 
 if not success then
