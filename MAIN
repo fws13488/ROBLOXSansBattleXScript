@@ -65,6 +65,12 @@ game.Players.LocalPlayer.Character:MoveTo(game.Workspace.GAMEPASSES.ToMain.Posit
 
 end)
 
+TeleportSection:NewButton("Extra Characters", "Teleport to Extra Characters", function()
+
+game.Players.LocalPlayer.Character:MoveTo(game.Workspace.EXTRAS.ToMain.Position)
+
+end)
+
 end)
 
 if not success then
