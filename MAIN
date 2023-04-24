@@ -1,4 +1,38 @@
-if game.PlaceId ~= 8079658723 then game.Player.LocalPlayer:Kick("Cannot use in this game") end
+if game.PlaceId ~= 8079658723 then game.Player.LocalPlayer:Kick("Cannot use in this game") return end
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("TITLE", "DarkTheme")
+local Window = Library.CreateLib("Sans Battles X", "Ocean")
+
+local success, errorMessage = pcal(function()
+
+  -- Main Section
+
+  local Main = Window:NewTab("Main")
+  local MainSection = Main:NewSection("Main")
+
+  MainSection:NewLabel("Coming Soon...")
+
+  -- Teleport Section
+
+  local Teleport = Window:NewTab("Teleport")
+  local TeleportSection = Teleport:NewSection("Teleport")
+
+  TeleportSection:NewButton("Lobby", "Teleport to Lobby", function()
+
+    game.Players.LocalPlayer.Character:MoveTo(game.Workspace.SpawnLocation.Position)
+
+  end)
+
+  TeleportSection:NewButton("Main Characters", "Teleport to Main Characters", function()
+
+      game.Players.LocalPlayer.Character:MoveTo(game.Workspace.STARTERS.ToLobby.Position)
+
+    end)
+
+end)
+
+if not success then
+
+   warn(errorMessage)
+
+end
