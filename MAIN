@@ -35,6 +35,12 @@ local success, errorMessage = pcal(function()
 
     end)
 
+    TeleportSection:NewButton("Soul Zone", "Teleport to Soul Zone", function()
+
+      game.Players.LocalPlayer.Character:MoveTo(game.Workspace["Soul Zone"].GoBack.Position)
+
+    end)
+
 end)
 
 if not success then
