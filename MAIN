@@ -95,7 +95,7 @@ end
 
 end)
 
-game.Players.LocalPlayer:GetMouse.Button1Down:Connect(function()
+game.Players.LocalPlayer:GetMouse().Button1Down:Connect(function()
 
 if ClickToTeleport == true then
 
