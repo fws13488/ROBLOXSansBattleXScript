@@ -71,6 +71,12 @@ game.Players.LocalPlayer.Character:MoveTo(game.Workspace.EXTRAS.ToMain.Position)
 
 end)
 
+TeleportSection:NewButton("Papyrus Characters", "Teleport to Papyrus Characters", function()
+
+game.Players.LocalPlayer.Character:MoveTo(game.Workspace.PAPYRUS.ToMain.Position)
+
+end)
+
 end)
 
 if not success then
